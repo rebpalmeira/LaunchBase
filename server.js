@@ -29,7 +29,7 @@ server.get("/portfolio", function(req, res) {
 server.get("/video", function(req, res){
     const id = req.query.id
     const video = videos.find(function(video){
-        video.id == id
+        return video.id == id
     })
     if(!video){
         return res.send("Video not found!")
